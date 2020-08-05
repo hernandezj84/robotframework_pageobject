@@ -12,7 +12,7 @@
 **Usage**
 ---
 
-```
+
     $ robot -d results tests
 
 The command above will run all the tests and will generate all the output files (robot framework's result files) in the results folder
