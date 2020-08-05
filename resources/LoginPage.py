@@ -89,5 +89,7 @@ class LoginPage(PageObject):
         self.driver.find_element_by_id("submit").click()
 
     def the_modal_should_have_the_text(self, text):
+        wait = WebDriverWait(self.driver, 2)
+        wait.until(ec.visibility_of_element_located((By.ID, "example-modal-sizes-title-lg")))
         if self.driver.find_element_by_id("example-modal-sizes-title-lg").text != text:
             raise AssertionError("Modal doesn't have the text {}".format(text))
